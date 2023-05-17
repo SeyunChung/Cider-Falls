@@ -29,10 +29,49 @@ export const createServicesHTML = () => {
 }
 
 
-/* //click event is what you were working on :P
+
 document.addEventListener('click', (clickEvt) => {
+    //declartaions
     let itemClicked = clickEvt.target
-    if()
+    let alertString = ''
+    let alertAreas = []
+
+    //checks if user clicked on a service
+    if (itemClicked.dataset.type === 'service') {
+        for (const service of services) {
+            if (service.id === parseInt(itemClicked.dataset.id)) {
+                for (const serviceLog of serviceLogs) {
+                    if (serviceLog.serviceId === service.id) {
+                        for (const area of areas) {
+                            if (serviceLog.areaId === area.id) {
+                                
+                                alertAreas.push(area.name)
+                            }
+                        }
+                    }
+                }
+
+                //start building the string from the previous array
+                let index = 1
+                alertString += `${service.name} is avalible in `
+                for (const alertArea of alertAreas) {
+                    //checks length of array for listing grammar rules
+                    if(alertAreas.length === 1){
+                        alertString += `${alertArea}.`
+                    }else if (index === alertAreas.length) {
+                    
+                        alertString += `and ${alertArea}.`
+                    } else {
+                        alertString += `${alertArea} `
+                    }
+                    index++
+                }
+
+            }
+            
+        }
+    //display window alert
+    window.alert(alertString)
+    }
 }
 )
- */
