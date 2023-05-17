@@ -1,1 +1,11 @@
-@import "details.css";
+.footerbox {
+    position: bottom;
+    border: 7px dotted brown;
+    background-color: #b6f47b;
+    font-family: monospace;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+  }
