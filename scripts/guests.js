@@ -16,6 +16,3 @@ export const createGuestsHTML = () =>{
 
     return html
 
-}
-
-
