@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.title {
+    text-align: center;
+    color: darkolivegreen;
+}
+body {
+    font-family: 'Quicksand', sans-serif;
+}
+
+#logo {
+    margin: 10px auto;
+    width: 250px;
+}
+
+
+.imageContainer {
+    display: flex;
+    justify-content: space-around;
+    background: #bcfabc;
+    margin: 10px;
+    flex-wrap: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+#footer {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+}
