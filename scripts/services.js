@@ -29,9 +29,10 @@ export const createServicesHTML = () => {
 }
 
 
-//click event is what you were working on :P
+/* //click event is what you were working on :P
 document.addEventListener('click', (clickEvt) => {
     let itemClicked = clickEvt.target
     if()
 }
 )
+ */
