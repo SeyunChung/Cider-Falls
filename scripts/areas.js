@@ -1,43 +1,46 @@
 // import
 import { getAreas, getGuests, getServiceLogs, getServices } from "./database.js"
+
 // store copy of areas, guests, serviceLogs, services
 const areas = getAreas()
 const guests = getGuests()
 const serviceLogs = getServiceLogs()
 const services = getServices()
 
-
-
-/* export const areaList = () => {
-    let html = "<ol>"
-
+  export const areaList = () => {
+    let areaHtml = `<ul>`;
     for (const area of areas) {
-        html += `<li data-id="${area.id}" 
-        data-name="${area.name}" 
-        data-type="area" 
-        >
-        ${area.name}</li>`
-    }
-
-    html += "</ol>"
-    return html
-} */
-
-export const areaList = () => areaHTML(areas)
-
-const areaHTML = (areaObj) => {
-    let areasHTML = `<h1 class="title">Areas</h1><div class="imageContainer">`
-    for (const area of areaObj) {
-        if(area.id < 4){
-            areasHTML += `<div id="area--${area.id}" data-type="area">${area.name}</div>`
-        } 
-    }
-    areasHTML += `</div><div class="imageContainer">`
-    for (const area of areaObj) {
-        if(area.id > 3){
-            areasHTML += `<div id="area--${area.id}" data-type="area">${area.name}</div>`
+      areaHtml += `<li data-type="area" data-id="${area.id}" data-name="${area.name}"> ${area.name} </li>`;
+      for (const serviceLog of serviceLogs) {
+        if (area.id === serviceLog.areaId) {
+          for (const service of services) {
+            if (serviceLog.serviceId === service.id) {
+              areaHtml += `<div data-type="serviceLog" data-id="${serviceLog.id}" data-areaId="${serviceLog.areaId}"> ${service.name}<br>`;
+            }
+          }
         }
+      }
+      areaHtml += ``;
     }
-    areasHTML += `</div>`
-    return areasHTML
-}
+    areaHtml += `</ul>`;
+    return areaHtml;
+  };
+  
+  document.addEventListener("click", (clickEvent) => {
+    const itemClicked = clickEvent.target;
+    let counter = 0;
+    if (itemClicked.dataset.type === "area") {
+      let clickedId = itemClicked.dataset.id;
+  
+      for (const guest of guests) {
+        if (parseInt(clickedId) === guest.areaId) {
+          counter++;
+        }
+      }
+      window.alert(
+        `${itemClicked.dataset.name} has ${counter} guests in the area`
+      );
+    }
+  }); 
+  
+
