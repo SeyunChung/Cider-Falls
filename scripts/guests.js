@@ -12,7 +12,7 @@ export const createGuestsHTML = () =>{
     for (const guest of guests) {
         html+=`<li data-type="guest">${guest.name}</li>`
     }
-    html+= `</ul>`
+    html+= `</ul></div>`
 
     return html
 
