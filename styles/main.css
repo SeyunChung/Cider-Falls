@@ -37,7 +37,7 @@
   justify-content: center;
   border: 7px dotted rgb(238, 150, 50);
   background-color: #d7f8b8;
-  width: 1300px;
+  width: 100%;
   padding-bottom: 30px;
   padding-top: 30px;
   font-size: 15px;
@@ -50,7 +50,7 @@
   justify-content: center;
   border: 7px dotted rgb(238, 150, 50);
   background-color: #d7f8b8;
-  width: 1300px;
+  width: 100%;
   padding-bottom: 50px;
   padding-top: 50px;
   font-size: 15px;
@@ -63,7 +63,7 @@
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
   grid-gap: 10px;
-  width: 1062px;
+  width: 100%;
   height: 300px;
   justify-items: space-evenly;
   align-items: center;
@@ -75,7 +75,10 @@
   background-color: #d7f8b8;
   font-family: monospace;
   color: black;
-  width: fit-content;
+  /* width: fit-content; */
+  display: flex;
+  justify-content: center;
+  width: 20%;
 }
 
 .services {
@@ -95,4 +98,12 @@
 
 .sectionName {
   border: black;
+}
+
+body{
+  margin: 10%;
+}
+
+.left-aligned{
+  width: 80%;
 }
