@@ -32,24 +32,44 @@
     font-family: monospace;
 }
 
-.mainBodyLeft {
+.areaServices {
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
+  justify-content: center;
+  border: 7px dotted rgb(238, 150, 50);
   background-color: #d7f8b8;
   width: fit-content;
-  margin-left: 0;
+  margin-left: 50px;
   padding-bottom: 30px;
   padding-top: 30px;
-  border: 7px dotted rgb(238, 150, 50);
   font-size: 15px;
   font-family: monospace;
   margin-top: 3px;
 }
+
+.areas {
+  display: flex;
+  justify-content: center;
+  border: 7px dotted rgb(238, 150, 50);
+  background-color: #d7f8b8;
+  width: fit-content;
+  margin-left: 50px;
+  padding-bottom: 30px;
+  padding-top: 30px;
+  font-size: 15px;
+  font-family: monospace;
+  margin-top: 3px;
+}
+
+.areaUl {
+  display: flex;
+  flex-wrap: wrap;
+  width: 500px;
+  justify-content: space-evenly;
+  float: left;
+}
+
 .mainBodyRight {
   display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
   border: 7px dotted rgb(238, 150, 50);
   background-color: #d7f8b8;
   font-family: monospace;

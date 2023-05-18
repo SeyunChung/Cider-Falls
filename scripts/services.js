@@ -8,7 +8,7 @@ let areas = getAreas()
 
 //creates and returns html
 export const createServicesHTML = () => {
-    let html = `<div class="services"><p class="service" >Park Services: </p> `
+    let html = `<div class="services"><p class="service"><strong>Park Services: </strong></p> `
     let index = 1
 
     for (const service of services) {

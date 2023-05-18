@@ -8,9 +8,9 @@ const serviceLogs = getServiceLogs()
 const services = getServices()
 
   export const areaList = () => {
-    let areaHtml = `<ul>`;
+    let areaHtml = `<ul class="areaUl">`;
     for (const area of areas) {
-      areaHtml += `<li class="sectionName" data-type="area" data-id="${area.id}" data-name="${area.name}"> ${area.name} </li>`;
+      areaHtml += `<li class="sectionName" data-type="area" data-id="${area.id}" data-name="${area.name}"> ${area.name}`;
       for (const serviceLog of serviceLogs) {
         if (area.id === serviceLog.areaId) {
           for (const service of services) {
@@ -20,7 +20,7 @@ const services = getServices()
           }
         }
       }
-      areaHtml += ``;
+      areaHtml += `</li>`;
     }
     areaHtml += `</ul>`;
     return areaHtml;
