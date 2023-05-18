@@ -8,15 +8,15 @@ let areas = getAreas()
 
 //creates and returns html
 export const createServicesHTML = () => {
-    let html = `<div><p>Park Services: </p> `
+    let html = `<div class="services"><p class="service" >Park Services: </p> `
     let index = 1
 
     for (const service of services) {
         //conditional to check if current service is last service in array
         if (index === services.length) {
-            html += `<p data-type="service" data-id="${service.id}">${service.name}</p>`
+            html += `<p class="service" data-type="service" data-id="${service.id}">${service.name}</p>`
         } else {
-            html += `<p data-type="service" data-id="${service.id}">${service.name}, </p>`
+            html += `<p class="service" data-type="service" data-id="${service.id}">${service.name}, </p>`
         }
 
         index++
