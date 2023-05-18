@@ -32,18 +32,6 @@
     font-family: monospace;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
 .mainBodyLeft {
   display: flex;
   justify-content: flex-start;
@@ -67,4 +55,15 @@
   font-family: monospace;
   color: black;
   width: fit-content;
+}
+
+.services {
+    margin: 10px;
+    display: flex;
+}
+
+.service {
+  display: flex;
+  margin-right: 10px;
+
 }
