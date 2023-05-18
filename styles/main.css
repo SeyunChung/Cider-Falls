@@ -38,7 +38,6 @@
   border: 7px dotted rgb(238, 150, 50);
   background-color: #d7f8b8;
   width: fit-content;
-  margin-left: 50px;
   padding-bottom: 30px;
   padding-top: 30px;
   font-size: 15px;
@@ -52,7 +51,6 @@
   border: 7px dotted rgb(238, 150, 50);
   background-color: #d7f8b8;
   width: fit-content;
-  margin-left: 50px;
   padding-bottom: 30px;
   padding-top: 30px;
   font-size: 15px;
@@ -61,15 +59,18 @@
 }
 
 .areaUl {
-  display: flex;
-  flex-wrap: wrap;
-  width: 500px;
-  justify-content: space-evenly;
-  float: left;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 10px;
+  width: 1062px;
+  height: 300px;
+  justify-items: space-evenly;
+  align-items: center;
 }
 
+
 .mainBodyRight {
-  display: flex;
   border: 7px dotted rgb(238, 150, 50);
   background-color: #d7f8b8;
   font-family: monospace;
@@ -85,5 +86,13 @@
 .service {
   display: flex;
   margin-right: 10px;
+}
 
+.main {
+  display: flex;
+}
+
+
+.sectionName {
+  border: black;
 }

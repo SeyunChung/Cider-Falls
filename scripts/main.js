@@ -28,7 +28,6 @@ ${createServicesHTML()}
 ${areaList()}
 </article>
 </section>
-
 <section class="mainBodyRight">
 <article class="guests">
 <h2 class="guest-header"></h2>
