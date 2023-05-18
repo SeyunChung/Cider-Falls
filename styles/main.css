@@ -33,11 +33,11 @@
 }
 
 .areaServices {
-  display: flex;
+  display: inline-block;
   justify-content: center;
   border: 7px dotted rgb(238, 150, 50);
   background-color: #d7f8b8;
-  width: fit-content;
+  width: 1300px;
   padding-bottom: 30px;
   padding-top: 30px;
   font-size: 15px;
@@ -46,13 +46,13 @@
 }
 
 .areas {
-  display: flex;
+  display: block;
   justify-content: center;
   border: 7px dotted rgb(238, 150, 50);
   background-color: #d7f8b8;
-  width: fit-content;
-  padding-bottom: 30px;
-  padding-top: 30px;
+  width: 1300px;
+  padding-bottom: 50px;
+  padding-top: 50px;
   font-size: 15px;
   font-family: monospace;
   margin-top: 3px;
