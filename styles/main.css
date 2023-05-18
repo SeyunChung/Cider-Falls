@@ -31,3 +31,13 @@
     color: rgb(238, 150, 50);
     font-family: monospace;
 }
+
+.services {
+    margin: 10px;
+    display: flex;
+}
+
+.service {
+  display: flex;
+  margin-right: 10px;
+}
