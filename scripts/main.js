@@ -6,8 +6,10 @@ let guestsHTML = createGuestsHTML()
 let servicesHTML = createServicesHTML()
 let areaHTML = areaList()
 
-let parentHTMLElement = document.querySelector('#container1')
+let parentHTMLElement = document.querySelector('.mainBodyLeft')
 parentHTMLElement.innerHTML = servicesHTML + areaHTML
 
-parentHTMLElement = document.querySelector('#container2')
+
+parentHTMLElement = document.querySelector('.mainBodyRight')
 parentHTMLElement.innerHTML = guestsHTML
+

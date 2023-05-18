@@ -10,12 +10,12 @@ const services = getServices()
   export const areaList = () => {
     let areaHtml = `<ul>`;
     for (const area of areas) {
-      areaHtml += `<li data-type="area" data-id="${area.id}" data-name="${area.name}"> ${area.name} </li>`;
+      areaHtml += `<li class="sectionName" data-type="area" data-id="${area.id}" data-name="${area.name}"> ${area.name} </li>`;
       for (const serviceLog of serviceLogs) {
         if (area.id === serviceLog.areaId) {
           for (const service of services) {
             if (serviceLog.serviceId === service.id) {
-              areaHtml += `<div data-type="serviceLog" data-id="${serviceLog.id}" data-areaId="${serviceLog.areaId}"> ${service.name}<br>`;
+              areaHtml += `<div class="serviceName" data-type="serviceLog" data-id="${serviceLog.id}" data-areaId="${serviceLog.areaId}"> ${service.name}<br>`;
             }
           }
         }
